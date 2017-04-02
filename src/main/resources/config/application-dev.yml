@@ -26,7 +26,7 @@ spring:
         serialization.indent_output: true
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:mysql://localhost:3306/jobsDetails?useUnicode=true&characterEncoding=utf8&useSSL=false
+        url: jdbc:mysql://localhost:3306/jobdetails?useUnicode=true&characterEncoding=utf8&useSSL=false
         username: root
         password:
         hikari:
@@ -46,10 +46,16 @@ spring:
             hibernate.generate_statistics: true
             hibernate.cache.region.factory_class: io.github.jhipster.config.jcache.NoDefaultJCacheRegionFactory
     mail:
-        host: localhost
-        port: 25
-        username:
-        password:
+            host: smtp.mail.yahoo.com
+            port: 587
+            username: ioana.marin19@yahoo.com  #Replace this field with your Yahoo username.
+            password: Numaiuitaparola13           #Replace this field with your Yahoo password.
+            protocol: smtp
+            tls: true
+            properties.mail.smtp:
+                auth: true
+                starttls.enable: true
+                ssl.trust: smtp.mail.yahoo.com
     messages:
         cache-seconds: 1
     thymeleaf:
@@ -96,7 +102,7 @@ jhipster:
             # security key (this key should be unique for your application, and kept secret)
             key: 954536eca4adc5fa0d71fd0d165c2fd0d5e2c9e5
     mail: # specific JHipster mail property, for standard properties see MailProperties
-        from: jobsDetails@localhost
+        from: ioana.marin19@yahoo.com
         base-url: http://127.0.0.1:8080
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
         jmx.enabled: true
